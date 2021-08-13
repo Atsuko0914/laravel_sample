@@ -43,7 +43,7 @@ class SamplesController extends Controller
 
             return redirect()->route('complete');
         } else {
-            return redirect()->route('sample')->withInput($input);
+            return redirect()->route('samples')->withInput($input);
         }
     }
 

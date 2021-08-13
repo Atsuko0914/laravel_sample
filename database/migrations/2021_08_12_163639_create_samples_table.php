@@ -13,7 +13,7 @@ class CreateSamplesTable extends Migration
      */
     public function up()
     {
-        Schema::connection('mysql_two')->create('samples', function ($table) {
+        Schema::create('samples', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email');

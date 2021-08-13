@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mysql_system_a'),
 
     /*
     |--------------------------------------------------------------------------
@@ -43,15 +43,15 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'mysql_one' => [
+        'mysql_system_a' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'contact'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', 'root'),
-            'unix_socket' => env('DB_SOCKET', ''),
+            'url' => env('DATABASE_URL_A'),
+            'host' => env('DB_HOST_A', '127.0.0.1'),
+            'port' => env('DB_PORT_A', '3306'),
+            'database' => env('DB_DATABASE_A', 'contact'),
+            'username' => env('DB_USERNAME_A', 'root'),
+            'password' => env('DB_PASSWORD_A', ''),
+            'unix_socket' => env('DB_SOCKET_A', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
@@ -63,15 +63,15 @@ return [
             ]) : [],
         ],
 
-        'mysql_two' => [
+        'mysql_system_b' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST_TWO', '127.0.0.1'),
-            'port' => env('DB_PORT_TWO', '3306'),
-            'database' => env('DB_DATABASE_TWO', 'sample'),
-            'username' => env('DB_USERNAME_TWO', 'root'),
-            'password' => env('DB_PASSWORD_TWO', 'root'),
-            'unix_socket' => env('DB_SOCKET', ''),
+            'url' => env('DATABASE_URL_B'),
+            'host' => env('DB_HOST_B', '127.0.0.1'),
+            'port' => env('DB_PORT_B', '3306'),
+            'database' => env('DB_DATABASE_B', 'sample'),
+            'username' => env('DB_USERNAME_B', 'root'),
+            'password' => env('DB_PASSWORD_B', ''),
+            'unix_socket' => env('DB_SOCKET_B', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
